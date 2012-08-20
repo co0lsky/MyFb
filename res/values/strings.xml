@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyFb</string>
+    <string name="profile_photo_desc">Profile Picture</string>
 </resources>

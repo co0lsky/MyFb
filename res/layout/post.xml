@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="5dp" >
+    
+	<LinearLayout
+        android:id="@+id/llContent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+	
+    <ImageView
+        android:id="@+id/ivProfilePhoto"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:contentDescription="@string/profile_photo_desc"
+        android:padding="2dp"
+        android:src="@drawable/icon" />
+
+	    <LinearLayout
+	        android:id="@+id/llContent2"
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+		    
+		    <TextView
+		        android:id="@+id/tvUserNameOrStory"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/app_name"
+		        android:textStyle="bold"
+		        android:textSize="15dp" />
+		    
+			 <TextView
+		        android:id="@+id/tvMessage"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/app_name" />
+		    
+		    <TextView
+		        android:id="@+id/tvPictureDesc"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/app_name"
+		        android:ellipsize="end"
+	      		android:maxLines="4" />
+		    
+		    <TextView
+		        android:id="@+id/tvTimeAndApp"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingBottom="5dp"
+		        android:text="@string/app_name"
+		        android:textSize="12dp"
+		        android:textColor="#8b8989" />
+	    </LinearLayout>
+   	
+	</LinearLayout>
+	
+	<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+	
+	    <ImageView
+	        android:id="@+id/ivPicture"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:maxHeight="200dp"
+	        android:contentDescription="@string/profile_photo_desc"
+	        android:scaleType="fitCenter"
+	        android:adjustViewBounds="true"
+	        android:src="@drawable/icon" />
+	    
+	    <TextView
+        	android:id="@+id/tvAlbumName"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        android:layout_gravity="left|center_horizontal|top"
+	        android:background="#70000000"
+	        android:textColor="#ffffffff"
+	        android:text="@string/app_name"
+	        android:ellipsize="end"
+     		android:maxLines="1"
+        	android:textSize="12dp" />
+	
+	</FrameLayout>
+	
+</LinearLayout>

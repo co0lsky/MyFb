@@ -1,6 +1,6 @@
 package com.just4sky.myfb.activities;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -9,29 +9,33 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.actionbarsherlock.app.SherlockListActivity;
 import com.facebook.android.AsyncFacebookRunner;
 import com.facebook.android.Facebook;
 import com.just4sky.myfb.controllers.MainController;
+import com.just4sky.myfb.lists.NewsFeedList;
 import com.just4sky.myfb.models.MainModel;
 import com.just4sky.myfb.utils.Utilities;
 import com.just4sky.myfb.vos.OnChangeListener;
 
-public class MyFbActivity extends Activity implements OnChangeListener<MainModel> {
+public class MyFbActivity extends SherlockListActivity implements OnChangeListener<MainModel> {
     private MainModel mainModel;
     private MainController mainController;
     private TextView tvName;
     private Button btn;
+    private NewsFeedList newsFeedList;
 
     public void onCreate(Bundle savedInstanceState) {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        //setContentView(R.layout.main);
         
         mainModel = new MainModel();
         mainModel.addListener(this);
 
-        mainController = new MainController(mainModel);
+        newsFeedList = new NewsFeedList(this, R.layout.newsfeedlist);
+        mainController = new MainController(this, mainModel, newsFeedList);
 
         tvName = (TextView)findViewById(R.id.name);
         btn = (Button)findViewById(R.id.button);
