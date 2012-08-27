@@ -18,7 +18,8 @@ local.properties
 *.properties
 
 # For Android project
-gen/
+R.java
+BuildConfig.java
 
 # External tool builders
 .externalToolBuilders/
