@@ -15,6 +15,11 @@ local.properties
 .classpath
 .settings/
 .loadpath
+*.properties
+
+# For android project
+R.java
+BuildConfig.java
 
 # External tool builders
 .externalToolBuilders/
