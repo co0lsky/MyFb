@@ -1,6 +1,13 @@
-package com.just4sky.myfb.vos;
+package com.just4sky.myfb.models;
 
 import org.json.JSONObject;
+
+import com.just4sky.myfb.vos.Action;
+import com.just4sky.myfb.vos.Application;
+import com.just4sky.myfb.vos.Connection;
+import com.just4sky.myfb.vos.Post;
+import com.just4sky.myfb.vos.Tag;
+import com.just4sky.myfb.vos.User;
 
 public class Link extends Post {
 	

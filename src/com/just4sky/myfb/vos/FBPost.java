@@ -5,6 +5,12 @@ import java.util.Date;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.just4sky.myfb.models.Checkin;
+import com.just4sky.myfb.models.Link;
+import com.just4sky.myfb.models.Photo;
+import com.just4sky.myfb.models.Status;
+import com.just4sky.myfb.models.Swf;
+import com.just4sky.myfb.models.Video;
 import com.just4sky.myfb.utils.Utilities;
 
 
